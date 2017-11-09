@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>首页</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/animate.css" />
+		<link rel="stylesheet" type="text/css" href="css/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+
+	</head>
+
+	<body>
+		<div class="web">
+			<!--音乐-->
+			<div class="iconfont icon-yinle1 music">
+				<audio id="bgsound" src="media/bgm.mp3" autoplay="autoplay" loop="loop" onended="this.paly()"></audio>
+			</div>
+			<div class="content">
+				<!--logo-->
+				<div class="logo animated bounceInDown">
+					<img src="images/logo.png"/>
+				</div>
+				<!--标题-->
+				<div class="title">
+					<p class="title-font animated flipInX">你办囍事</p>
+					<p class="title-font animated flipInY">我送囍酒</p>
+				</div>
+				<div class="buttom">
+					<a class="btn animated rotateInDownLeft diy">
+						<p class="btnfont">定制我的囍宴</p>
+					</a>
+					<a  href="html/getBanquet.html" class="btn animated rotateInDownLeft">
+						<p class="btnfont">我要免费领取囍酒</p>
+					</a>
+				</div>
+			</div>
+			<!---弹出层--->
+			<div class="shade">
+				<div class="frame animated fadeInDown">
+					<i class="iconfont icon-quxiao quxiao"></i>
+						<p class="font">定制专属囍宴</p>
+						<p class="font">邀请宾客入席</p>
+						<p class="font">抢999元现金贺礼！</p>
+						<a href="html/rule.html" class="shuru">查看活动规则</a>
+				</div>
+			</div>
+		</div>
+		<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/common.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+
+</html>

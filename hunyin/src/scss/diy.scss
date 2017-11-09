@@ -1,0 +1,558 @@
+@charset "utf-8";
+$font-size:20px;
+
+@function s($px) {
+    @return $px/$font-size*(375/640)*1rem;
+}
+html {
+    font-size: $font-size;
+}
+
+.web {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url(../images/beijingX.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /**********头部**********/
+    header {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 55%;
+        overflow: hidden;
+        //音乐
+        .music {
+            color: #e7c598;
+            position: absolute;
+            right: s(20px);
+            top: s(15px);
+            font-size: 30px;
+            z-index: 999;
+    }
+    .icon-yinle1{
+        animation: music 5s linear infinite;
+    }
+    /**************动画效果**************/
+        @-webkit-keyframes music{
+            from{transform:  rotate(0);}
+            to{transform: rotate(360deg);}
+        }
+        @keyframes music{
+            from{transform: rotate(0);}
+            to{transform: rotate(360deg);}
+        }
+        .btnD{
+            display: inline-block;
+            position: absolute;
+            width: s(40px);
+            height: s(38px);
+            top: s(25px);
+            left: s(36px);
+            .i {
+                display: inline-block;
+                font-size: s(20px);
+                line-height: s(32px);
+                color: #bf0c21;
+                position: absolute;
+                font-size: s(24px);
+                line-height:s(38px);
+                margin-left: 5px;
+                
+            }
+        }
+        input[type="button"]{
+            width: s(90px);
+            height: s(38px);
+            border-radius: 5px;
+            background: #e7c598;
+            color: #bf0c21;
+            position: absolute;
+            padding-left:s(30px);
+            line-height: s(38px);
+            box-sizing: border-box;
+            padding-bottom: 10px;
+            -webkit-appearance: none;
+            box-shadow: 1px 2px 5px #000;
+        }
+        
+        //切换键
+        .cut {
+            display: inline-block;
+            width: s(90px);
+            height: s(38px);
+            padding: s(3px) s(6px);
+            box-sizing: border-box;
+            border-radius: 5px;
+            background: #e7c598;
+            position: absolute;
+            top: s(25px);
+            left: s(36px);
+            font-size: 0;
+            color: #bf0c21;
+            z-index: 999;
+            .i {
+                font-size: s(20px);
+                line-height: s(32px);
+                &:hover{
+                    transform: rotate(360deg);
+                    btransition: all 800ms ease-in-out;
+                }
+            }
+            .fonts{
+                display: inline-block;
+                margin-left: 3px;
+                font-size: s(18px);
+                line-height: s(32px);
+            }
+        }
+        .active{
+            display: block;
+        }
+        li {
+            position: relative;
+            display: inline-block;
+            text-align: center;
+            margin-top: s(50px);
+            display: none;
+            .tu {
+                display: inline-block;
+                width: s(490px);
+            }
+            .tugd{
+                display: inline-block;
+                width: s(560px);
+                padding-top: 10px;
+            }
+            //定位
+            .location {
+                position: absolute;
+                display: inline-block;
+                font-size: 12px;
+                color: #BF0C21;
+                .tu {
+                    width: s(78px);
+                }
+                .lingqu {
+                    width: s(78px);
+                    text-align: center;
+                    display: inline-block;
+                    position: absolute;
+                    top: 10px;
+                    left: 0;
+                    line-height: s(28px);
+                    box-sizing: border-box;
+                    padding: 0 4px;
+                    .num {
+                        font-size: 14px;
+                        font-weight: bold;
+                        display: inline-block;
+                        min-width: 10px;
+                    }
+                }
+            }
+            //三亚
+            .haikou {
+                position: absolute;
+                top: -22px;
+                right: 78px;
+            }
+            //海口
+            .sanya {
+                position: absolute;
+                bottom: 32px;
+                left: 133px;
+            }
+            //茂名
+            .maoming {
+                position: absolute;
+                bottom: 82px;
+                left: 57px;
+            }
+            //广州
+            .guangzhou{
+                position: absolute;
+                top: 40px;
+                left: 160px;
+            }
+            //韶关
+            .huizhou{
+                position: absolute;
+                right: 107px;
+                top: 59px
+            }
+        }
+        //文字
+        .font {
+            color: #e7c598;
+            position: absolute;
+            bottom: 0;
+            right: s(30px);
+            &>p {
+                display: block;
+                text-align: right;
+                font-size: s(38px);
+                line-height: s(50px);
+                .num {
+                    font-size: s(60px);
+                    font-family: "新宋体";
+                }
+            }
+            .small {
+                font-size: s(28px);
+            }
+        }
+    }
+    section {
+        position: absolute;
+        top: 55%;
+        bottom: 10%;
+        width: 100%;
+        height: 35%;
+        overflow: hidden;
+        overflow-y: auto;
+        .explain {
+            padding: s(10px) s(54px);
+            color: #e2ac88;
+            font-size: s(28px);
+            text-align: justify;
+            .title {
+                line-height: s(42px);
+                padding: s(5px) 0;
+                font-weight: bold;
+            }
+            .content {
+                font-size: s(22px);
+                line-height: s(38px);
+            }
+        }
+    }
+    footer {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 10%;
+        overflow: hidden;
+        //按钮
+        .btn {
+            color: #e2ac88;
+            display: block;
+            position: relative;
+            margin: 0 auto;
+            text-align: center;
+            margin-top: 2px;
+            width: s(318px);
+            .btnfont {
+                width: s(318px);
+                box-sizing: border-box;
+                background: url(../images/kuang.png) round;
+                padding: 5px 5px;
+                font-size: s(24px);
+            }
+        }
+    }
+    //首页图标
+    .home {
+        font-size: s(30px);
+        color: #bf0c21;
+        line-height: s(41px);
+        width: s(41px);
+        height: s(41px);
+        border-radius: 100%;
+        background: #e7c598;
+        position: absolute;
+        bottom: s(30px);
+        right: s(40px);
+        text-align: center;
+        box-shadow: 1px 2px 5px #000;
+    }
+}
+/******************兑换*******************/
+.conversion{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: s(327px);
+    height: 200px;
+    text-align: center;
+    .code{
+        color: #e7c598;
+    }
+    input[type="text"]{
+        width: s(327px);
+        height: s(52px);
+        border: none;
+        background: #e7c598;
+        border-radius: 8px;
+        box-sizing: border-box;
+        padding: 0 10px;
+        margin-top: s(42px);
+        margin-bottom: s(20px);
+        font-size: s(32px);
+        line-height:s(52px);
+        text-align: center;
+        color: #bf0c21;
+        -webkit-appearance: none;
+        box-shadow: 1px 2px 5px #000;
+    }
+    .affirm{
+        color: #e7c598;
+        width: s(250px);
+        background: url(../images/kuang.png) round;
+        padding: 2px  2px;
+        box-sizing: border-box;
+        margin: 0 auto;
+        margin-top: s(70px);
+        font-size: 17px;
+    }
+}
+/***********兑换**********/
+.succeed{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,.7);
+    display: none;
+    .shade{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        background: #e7c598;
+        width: s(413px);
+        height: s(270px);
+        border-radius: 8px;
+        text-align: center;
+        box-shadow: 3px 3px 6px #000;
+        .quxiao{
+            color: #bf0c21;
+            display: block;
+            font-size: 28px;
+            position: absolute;
+            right: s(12px);
+            top: s(5px);
+        }
+        .font{
+            font-size: s(50px);
+            color: #bf0c21;
+            line-height: s(270px);
+        }
+    }
+    //失败
+    .fontBe{
+       color: #bf0c21;
+       font-size: s(36px);
+       padding-top: s(60px);       
+       padding-bottom: s(20px);
+    }
+    .shuru{
+        width:s(260px);
+        height:s(50px);
+        font-size: 16px;
+        border-radius: 6px;
+        background: #bf0c21;
+        color: #e7c598;
+        -webkit-appearance: none;
+        box-shadow: 1px 2px 5px #000;
+        margin-top: 20px;
+    }
+    
+    
+}
+/******************地图定位******************/
+#map{
+    width: s(550px);
+    height: s(550px);
+    margin: 0 auto;
+    margin-top: s(200px);
+    margin-bottom: s(40px);
+    box-shadow: 5px 5px 5px #000;
+}
+.explain{
+    color: #e7c598;
+    width: s(520px);
+    margin: 0 auto;
+    text-align: center;
+    font-size: s(30px);
+    line-height: s(42px);
+}
+.shibai{
+    display: none;
+    
+}
+.sb{
+    transform: translateY(-20%);
+}
+/*************动画****************/
+.delay_02{
+    animation-delay: .2s;
+}
+.delay_03{
+    animation-delay: .3s;
+}
+/***********地图样式************/
+.info-title {
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    background-color: blue;
+    line-height: 26px;
+    padding: 0px 0 0 6px;
+    font-weight: lighter;
+    letter-spacing: 1px;
+}
+.info-content {
+    font-size: 12px;
+    padding: 4px;
+    color: #666666;
+    line-height: 23px;
+}
+.amap-adcontent-body {
+    width: 90%;
+}
+.amap-adcombo-close {
+    right: 34px;
+}
+
+
+@media (min-width: 320px) and (max-width:374px){
+    .web header li .tu {
+        width: s(450px);
+    }
+    .web header li .tugd{
+        width: s(500px);
+    }
+    .web header li .location .tu{
+        width: s(70px);
+    }
+    .web header li .location .lingqu{
+        width: s(70px);
+    }
+    .web header li .haikou {
+        top: -25px;
+        right: 63px;
+    }
+    .web header li .sanya {
+        bottom: 32px;
+        left: 111px;
+    }
+    .web header .font > p{
+        font-size: s(28px);
+        line-height: s(34px);
+    }
+    .web header .font > p .num{
+        font-size: s(50px);
+        font-family: "新宋体";
+    }
+    .web section .explain{
+        font-size: s(26px);
+        padding: 0;
+        width: s(500px);
+    }
+    .web section .explain .title{
+        line-height: s(42px);
+        padding: 0;
+    }
+    .web header li .shaoguan {
+        left: 160px;
+        top: -20px;
+    }
+    .web header li .yangjiang {
+        bottom: 84px;
+        left: 89px;
+    }
+    .web header li .maoming {
+        bottom: 74px;
+        left: 44px;
+    }
+    #map{
+        width: s(500px);
+        height: s(480px);
+        margin: 0 auto;
+        margin-top: s(180px);
+        margin-bottom: s(40px);
+    }
+}
+@media (min-width:414px) {
+    .web header li .tu {
+        width: s(580px);
+    }
+    .web header li .tugd{
+        width: s(620px);
+    }
+    .web header li .location .tu{
+        width: s(88px);
+    }
+    .web header li .location .lingqu{
+        width: s(88px);
+        top: 14px;
+        font-size: s(24px);
+        line-height: s(32px);
+    }
+    .web header li .location .lingqu .num{
+        font-size: s(28px);
+        font-weight: bold;
+    }
+    .web header li .haikou {
+        top: -26px;
+        right: 80px;
+    }
+    .web header li .sanya {
+        bottom: 42px;
+        left: 143px;
+    }
+    .web header li .shaoguan {
+        left: 207px;
+        top: -26px;
+    }
+    .web header li .yangjiang {
+        bottom: 102px;
+        left: 118px;
+    }
+    .web header li .maoming {
+        bottom: 92px;
+        left: 63px;
+    }
+    .web header .font > p{
+        font-size: s(42px);
+        line-height: s(50px);
+    }
+    .web header .font .small {
+        font-size: s(38px);
+    }
+    .explain{
+        width: s(580px);
+        font-size:s(34px);
+        line-height: s(48px);
+    }
+    .web section .explain .title {
+        font-size: s(36px);
+    }
+    .web section .explain .content {
+        font-size: s(28px);
+        line-height: s(42px);
+    }
+    #map{
+        width: s(600px);
+        height: s(550px);
+        margin: 0 auto;
+        margin-top: s(230px);
+        margin-bottom: s(40px);
+    }
+}

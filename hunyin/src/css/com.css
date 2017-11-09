@@ -1,0 +1,13 @@
+.active {
+  z-index: 99; }
+
+.bgg {
+  width: 100%;
+  height: 100%;
+  background: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 98; }
+
+/*# sourceMappingURL=com.css.map */

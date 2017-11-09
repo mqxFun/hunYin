@@ -1,0 +1,229 @@
+html {
+  font-size: 20px; }
+
+.web {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-image: url("../images/shadeBackground.png");
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+img {
+  display: block; }
+
+section {
+  width: 100%; }
+
+.infoTitle {
+  margin: 50% auto 0;
+  width: 7.38281rem;
+  height: 0.9082rem;
+  font-size: 0.9082rem;
+  color: #e7c598;
+  line-height: 0.9082rem; }
+
+.infoForm {
+  width: 9.58008rem;
+  height: 5.6543rem;
+  margin: 1.23047rem auto 0; }
+  .infoForm .formItem {
+    margin-bottom: 0.38086rem;
+    border-radius: 0.23438rem;
+    box-shadow: 1px 2px 5px #000; }
+  .infoForm .formItem:last-of-type {
+    margin-bottom: 0; }
+
+.formItem::after {
+  content: "";
+  display: block;
+  clear: both; }
+
+.item {
+  width: 4.83398rem;
+  height: 1.11328rem;
+  line-height: 1.11328rem;
+  font-size: 0.64453rem;
+  text-indent: 0.58594rem;
+  color: #bf0c21;
+  border-right: 0.0293rem solid #c62e37;
+  border-radius: 0.23438rem 0 0 0.23438rem;
+  background: #e7c598; }
+
+.message {
+  width: 4.6875rem;
+  line-height: 1.11328rem;
+  font-size: 0.64453rem;
+  height: 1.11328rem;
+  border-radius: 0 0.23438rem 0.23438rem 0;
+  border-style: none;
+  padding: 0 0.73242rem;
+  background: #e7c598;
+  letter-spacing: 2px;
+  color: #bf0c21;
+  box-sizing: border-box;
+  -webkit-appearance: none; }
+  .message option {
+    height: 1.17188rem;
+    line-height: 1.17188rem;
+    font-size: 0.87891rem;
+    width: 100%;
+    border: none; }
+
+.prompt {
+  margin: 0.84961rem auto 0;
+  width: 12.89063rem;
+  height: 2.13867rem; }
+
+.promptItem {
+  width: 100%;
+  line-height: 0.79102rem;
+  text-align: center;
+  font-size: 0.58594rem;
+  color: #e7c598; }
+
+.submit {
+  display: block;
+  margin: 0 auto;
+  width: 7.32422rem;
+  outline: none;
+  height: 1.31836rem;
+  font-size: 0.70313rem;
+  line-height: 1.31836rem;
+  margin-top: 0.9082rem;
+  background-image: url("../images/btnBorder.png");
+  text-align: center;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #e7c598; }
+
+.shadeTier {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3); }
+  .shadeTier .tier {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 12.09961rem;
+    height: 7.32422rem;
+    background: #e7c598;
+    border-radius: 0.23438rem; }
+    .shadeTier .tier .cancel {
+      width: 1.05469rem;
+      height: 1.05469rem;
+      border-radius: 1.05469rem;
+      color: #bf0c21;
+      margin-right: 0.46875rem;
+      margin-top: 0.32227rem;
+      background: #e7c598;
+      display: block;
+      outline: none; }
+    .shadeTier .tier .cancel::after {
+      content: "";
+      display: block;
+      clear: both; }
+    .shadeTier .tier .submitSucceed {
+      width: 6.03516rem;
+      height: 1.20117rem;
+      line-height: 1.20117rem;
+      font-size: 1.20117rem;
+      margin: 0 auto;
+      color: #bf0c21;
+      text-align: center;
+      margin-top: 2.46094rem; }
+    .shadeTier .tier .lookUp {
+      width: 6.50391rem;
+      border-radius: 0.23438rem;
+      height: 1.11328rem;
+      line-height: 1.11328rem;
+      color: #e7c598;
+      font-size: 0.58594rem;
+      text-align: center;
+      display: block;
+      margin: 1.11328rem auto 0;
+      background: #bf0c21; }
+
+.home {
+  font-size: 0.87891rem;
+  color: #bf0c21;
+  line-height: 1.20117rem;
+  width: 1.20117rem;
+  height: 1.20117rem;
+  border-radius: 100%;
+  background: #e7c598;
+  position: absolute;
+  bottom: 0.87891rem;
+  right: 1.17188rem;
+  text-align: center;
+  box-shadow: 1px 2px 5px #000; }
+
+@media only screen and (min-width: 768px) and (max-width: 1000px) {
+  .infoTitle {
+    margin-top: 40%;
+    width: 15.12rem;
+    height: 1.86rem;
+    font-size: 1.86rem;
+    line-height: 1.86rem; }
+
+  .infoForm {
+    width: 19.62rem;
+    height: 11.58rem;
+    margin: 2.52rem auto 0; }
+    .infoForm .formItem {
+      margin-bottom: 0.78rem; }
+    .infoForm .formItem:last-of-type {
+      margin-bottom: 0; }
+
+  .item {
+    width: 9.9rem;
+    height: 2.28rem;
+    line-height: 2.28rem;
+    font-size: 1.32rem;
+    text-indent: 1.2rem;
+    border-radius: 0.48rem 0 0 0.48rem; }
+
+  .message {
+    width: 9.6rem;
+    line-height: 2.28rem;
+    font-size: 1.32rem;
+    height: 2.28rem;
+    border-radius: 0 0.48rem 0.48rem 0;
+    padding: 0 0.3rem; }
+
+  .prompt {
+    margin: 1.74rem auto 0;
+    width: 26.4rem;
+    height: 4.38rem; }
+
+  .promptItem {
+    line-height: 1.62rem;
+    font-size: 1.08rem; }
+
+  .submit {
+    width: 15rem;
+    height: 2.7rem;
+    font-size: 1.44rem;
+    line-height: 2.7rem;
+    margin-top: 1.86rem; }
+
+  .home {
+    width: 2.46rem;
+    height: 2.46rem;
+    border-radius: 2.46rem;
+    right: 3.36rem;
+    bottom: 1.5rem;
+    line-height: 2.46rem;
+    font-size: 1.2rem; } }
+
+/*# sourceMappingURL=ownerInfo.css.map */

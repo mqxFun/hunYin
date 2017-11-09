@@ -1,0 +1,289 @@
+@charset "utf-8";
+$font-size: 20px;
+@function a($px) {
+    @return $px/$font-size*(375/640)*1rem;
+}
+
+html {
+    font-size: $font-size;
+}
+
+.web {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-image: url("../images/shadeBackground.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    img {
+        display: block;
+    }
+    /**********头部**********/
+    header {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 7%;
+        .listTitle {
+            width: a(318px);
+            height: a(44px);
+            background-image: url("../images/listBorder.png");
+            background-repeat: no-repeat;
+            background-size: contain;
+            text-align: center;
+            line-height: a(44px);
+            color: #e7c598;
+            font-size: a(26px);
+            margin: a(25px) auto 0;
+        }
+    }
+    /**********内容**********/
+    section {
+        position: absolute;
+        top: 7%;
+        bottom: 10%;
+        width: 100%;
+        height: 86%;
+        overflow: hidden;
+        overflow-y: auto;
+        .Table {
+            border: a(1px) solid #e7c497;
+            width: a(500px);
+            height: a(826px);
+            overflow: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin:  auto;
+            font-size: a(23px);
+            .tbody {
+                width: 100%;
+                overflow: scroll;
+                height: a(826px);
+                .tr {
+                    height: a(91px);
+                    border-top: a(1px) solid #e7c497;
+                    color: #fbf4f5;
+                    .td {
+                        float: left;
+                        line-height: a(91px);
+                    }
+                    .tdId {
+                        width: a(96px);
+                        position: relative;
+                        font-size: a(26px);
+                        text-align: center;
+                        .topThree {
+                            position: absolute;
+                            left: a(40px);
+                            top: a(20px);
+                            width: a(18px);
+                            height: a(11px);
+                            img {
+                                width: a(18px);
+                                height: a(11px);
+                            }
+                        }
+                    }
+                    .tdName {
+                        width: a(200px);
+                    }
+                    .tdImg {
+                        width: a(80px);
+                        margin-top: a(15px);
+                        img {
+                            width: a(61px);
+                            height: a(61px);
+                            border-radius: a(61px);
+                            overflow: hidden;
+                        }
+                    }
+                }
+                .tr::after {
+                    content: "";
+                    display: block;
+                    clear: both;
+                }
+                .tr:first-of-type,
+                .tr:nth-of-type(2),
+                .tr:nth-of-type(3) {
+                    color: #e7c598;
+                }
+                .active {
+                    position: absolute;
+                    bottom: -1px;
+                    width: a(500px);
+                    color: #bf0c21;
+                    z-index: 50;
+                    background: #e7c598;
+                }
+                .active2 {
+                    color: #bf0c21;
+                    width: a(500px);
+                    background: #e7c598;
+                }
+            }
+            
+        }
+        
+    }
+    /**********内容**********/
+    footer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 7%;
+        overflow: hidden;
+        overflow-y: auto;
+        //首页图标
+        .home {
+            font-size: a(30px);
+            color: #bf0c21;
+            line-height: a(41px);
+            width: a(41px);
+            height: a(41px);
+            border-radius: 100%;
+            background: #e7c598;
+            position: absolute;
+            bottom: a(30px);
+            right: a(40px);
+            text-align: center;
+            box-shadow: 1px 2px 5px #000;
+        }
+    }
+}
+
+
+
+
+@media only screen and (min-width: 320px) and (max-width: 374px) {
+    .listTitle {
+        font-size: a(26px)*320/375;
+        width: a(318px)*320/375;
+        line-height: a(44px)*320/375;
+        height: a(44px)*320/375;
+        margin: a(41px)*320/375 auto 0;
+    }
+    .Table {
+        font-size: a(23px)*320/375;
+        height: a(920px)*320/375;
+        .tbody {
+            .tr {
+                height: a(101px)*320/375;
+                .td {
+                    line-height: a(101px)*320/375;
+                }
+                .tdId {
+                    width: a(96px)*320/375;
+                    font-size: a(26px)*320/375;
+                    .topThree {
+                        left: a(39px)*320/375;
+                        top: a(18px)*320/375;
+                        width: a(18px)*320/375;
+                        height: a(11px)*320/375;
+                        img {
+                            width: a(18px)*320/375;
+                            height: a(11px)*320/375;
+                        }
+                    }
+                }
+                .tdName {
+                    width: a(200px)*320/375;
+                }
+                .tdImg {
+                    width: a(80px)*320/375;
+                    margin-top: a(20px)*320/375;
+                    img {
+                        width: a(61px)*320/375;
+                        height: a(61px)*320/375;
+                    }
+                }
+            }
+        }
+    }
+    .active {
+        bottom: a(110px);
+    }
+}
+
+@media only screen and (min-width: 767px) and (max-width: 1000px) {
+    .listTitle {
+        font-size: a(26px)*768/375;
+        width: a(318px)*768/375;
+        line-height: a(44px)*768/375;
+        height: a(44px)*768/375;
+        margin: a(41px)*768/375 auto 0;
+    }
+    .Table {
+        font-size: a(26px)*640/375;
+        height: a(1400px);
+        width: a(500px)*768/375;
+        .tbody {
+            height: a(1400px);
+            .tr {
+                height: a(155px);
+                .td {
+                    line-height: a(155px);
+                }
+                .tdId {
+                    width: a(96px)*768/375;
+                    font-size: a(26px)*640/375;
+                    .topThree {
+                        left: a(84px);
+                        top: a(20px);
+                        width: a(18px)*640/375;
+                        height: a(11px)*640/375;
+                        img {
+                            width: a(18px)*640/375;
+                            height: a(11px)*640/375;
+                        }
+                    }
+                }
+                .tdName {
+                    width: a(200px)*768/375;
+                }
+                .tdImg {
+                    width: a(80px)*768/375;
+                    margin-top: a(20px);
+                    img {
+                        width: a(100px);
+                        height: a(100px);
+                    }
+                }
+            }
+        }
+    }
+    .active {
+        bottom: a(160px);
+        width: a(1024px);
+        height: a(155px);
+    }
+    .active2 {
+        width: a(1024px);
+        height: a(155px);
+    }
+    //右下角 链接回首页
+    .home {
+        width: a(41px)*768/375;
+        height: a(41px)*768/375;
+        border-radius: a(41px)*768/375;
+        right: a(56px)*768/375;
+        bottom: a(25px)*768/375;
+        line-height: a(41px)*768/375;
+        font-size: a(20px)*768/375;
+    }
+}
+
+@media only screen and (min-width: 414px) and (max-width: 768px) {
+    .active {
+        bottom: a(250px);
+    }
+}

@@ -1,0 +1,264 @@
+@charset "utf-8";
+
+$font-size: 20px;
+@function a($px) {
+    @return $px/$font-size*(375/640)*1rem;
+}
+html {
+    font-size: $font-size;
+}
+.web {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-image: url("../images/shadeBackground.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+img {
+    display: block;
+}
+section {
+    width: 100%;
+}
+.infoTitle {
+    margin: 50% auto 0;
+    width: a(252px);
+    height: a(31px);
+    font-size: a(31px);
+    color: #e7c598;
+    line-height: a(31px);
+}
+
+//表单
+.infoForm {
+    width: a(327px);
+    height: a(193px);
+    margin: a(42px) auto 0;
+    .formItem {
+        margin-bottom: a(13px);
+        border-radius: a(8px);
+        box-shadow: 1px 2px 5px #000;
+    }
+    .formItem:last-of-type {
+        margin-bottom: 0;
+        
+    }
+}
+
+.formItem::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.item {
+    width: a(165px);
+    height: a(38px);
+    line-height: a(38px);
+    font-size: a(22px);
+    text-indent: a(20px);
+    color: #bf0c21;
+    border-right: a(1px) solid #c62e37;
+    border-radius: a(8px) 0 0 a(8px);
+    background: #e7c598;
+}
+.message {
+    width: a(160px);
+    line-height: a(38px);
+    font-size: a(22px);
+    height: a(38px);
+    border-radius: 0 a(8px) a(8px) 0;
+    border-style: none;
+    padding: 0 a(25px);
+    background: #e7c598;
+    letter-spacing: 2px;
+    color: #bf0c21;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    option{
+        height: a(40px);
+        line-height: a(40px);
+        font-size: a(30px);
+        width: 100%;
+        border: none;
+    }
+}
+
+//提示文本
+.prompt {
+    margin: a(29px) auto 0;
+    width: a(440px);
+    height: a(73px);
+}
+.promptItem {
+    width: 100%;
+    line-height: a(27px);
+    text-align: center;
+    font-size: a(20px);
+    color: #e7c598;
+}
+
+//提交按钮
+.submit {
+    display: block;
+    margin: 0 auto;
+    width: a(250px);
+    outline: none;
+    height: a(45px);
+    font-size: a(24px);
+    line-height: a(45px);
+    margin-top: a(31px);
+    background-image: url("../images/btnBorder.png");
+    text-align: center;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #e7c598;
+}
+
+//弹出框  
+.shadeTier {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
+    .tier {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        width: a(413px);
+        height: a(250px);
+        background: #e7c598;
+        border-radius: a(8px);
+        .cancel {
+            width: a(36px);
+            height: a(36px);
+            border-radius: a(36px);
+            color: #bf0c21;
+            margin-right: a(16px);
+            margin-top: a(11px);
+            background: #e7c598;
+            display: block;
+            outline: none;
+        }
+        .cancel::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        .submitSucceed {
+            width: a(206px);
+            height: a(41px);
+            line-height: a(41px);
+            font-size: a(41px);
+            margin: 0 auto;
+            color: #bf0c21;
+            text-align: center;
+            margin-top: a(84px);
+        }
+        .lookUp {
+            width: a(222px);
+            border-radius: a(8px);
+            height: a(38px);
+            line-height: a(38px);
+            color: #e7c598;
+            font-size: a(20px);
+            text-align: center;
+            display: block;
+            margin: a(38px) auto 0;
+            background: #bf0c21;
+        }
+    }
+}
+
+//首页图标
+.home {
+    font-size: a(30px);
+    color: #bf0c21;
+    line-height: a(41px);
+    width: a(41px);
+    height: a(41px);
+    border-radius: 100%;
+    background: #e7c598;
+    position: absolute;
+    bottom: a(30px);
+    right: a(40px);
+    text-align: center;
+    box-shadow: 1px 2px 5px #000;
+}
+@media only screen and (min-width: 768px) and (max-width: 1000px) {
+    .infoTitle {
+        margin-top: 40%;
+        width: a(252px)*768/375;
+        height: a(31px)*768/375;
+        font-size: a(31px)*768/375;
+        line-height: a(31px)*768/375;
+    }
+
+    //表单
+    .infoForm {
+        width: a(327px)*768/375;
+        height: a(193px)*768/375;
+        margin: a(42px)*768/375 auto 0;
+        .formItem {
+            margin-bottom: a(13px)*768/375;
+        }
+        .formItem:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+    .item {
+        width: a(165px)*768/375;
+        height: a(38px)*768/375;
+        line-height: a(38px)*768/375;
+        font-size: a(22px)*768/375;
+        text-indent: a(20px)*768/375;
+        border-radius: a(8px)*768/375 0 0 a(8px)*768/375;
+    }
+    .message {
+        width: a(160px)*768/375;
+        line-height: a(38px)*768/375;
+        font-size: a(22px)*768/375;
+        height: a(38px)*768/375;
+        border-radius: 0 a(8px)*768/375 a(8px)*768/375 0;
+        padding: 0 a(5px)*768/375;
+    }
+
+    //提示文本
+    .prompt {
+        margin: a(29px)*768/375 auto 0;
+        width: a(440px)*768/375;
+        height: a(73px)*768/375;
+    }
+    .promptItem {
+        line-height: a(27px)*768/375;
+        font-size: a(18px)*768/375;
+    }
+
+    //提交按钮
+    .submit {
+        width: a(250px)*768/375;
+        height: a(45px)*768/375;
+        font-size: a(24px)*768/375;
+        line-height: a(45px)*768/375;
+        margin-top: a(31px)*768/375;
+    }
+    //右下角 链接回首页
+    .home {
+        width: a(41px)*768/375;
+        height: a(41px)*768/375;
+        border-radius: a(41px)*768/375;
+        right: a(56px)*768/375;
+        bottom: a(25px)*768/375;
+        line-height: a(41px)*768/375;
+        font-size: a(20px)*768/375;
+    }
+}

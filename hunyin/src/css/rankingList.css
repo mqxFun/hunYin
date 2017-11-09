@@ -1,0 +1,230 @@
+@charset "UTF-8";
+html {
+  font-size: 20px; }
+
+.web {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-image: url("../images/shadeBackground.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  /**********头部**********/
+  /**********内容**********/
+  /**********内容**********/ }
+  .web img {
+    display: block; }
+  .web header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 7%; }
+    .web header .listTitle {
+      width: 9.31641rem;
+      height: 1.28906rem;
+      background-image: url("../images/listBorder.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      text-align: center;
+      line-height: 1.28906rem;
+      color: #e7c598;
+      font-size: 0.76172rem;
+      margin: 0.73242rem auto 0; }
+  .web section {
+    position: absolute;
+    top: 7%;
+    bottom: 10%;
+    width: 100%;
+    height: 86%;
+    overflow: hidden;
+    overflow-y: auto; }
+    .web section .Table {
+      border: 0.0293rem solid #e7c497;
+      width: 14.64844rem;
+      height: 24.19922rem;
+      overflow: auto;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      font-size: 0.67383rem; }
+      .web section .Table .tbody {
+        width: 100%;
+        overflow: scroll;
+        height: 24.19922rem; }
+        .web section .Table .tbody .tr {
+          height: 2.66602rem;
+          border-top: 0.0293rem solid #e7c497;
+          color: #fbf4f5; }
+          .web section .Table .tbody .tr .td {
+            float: left;
+            line-height: 2.66602rem; }
+          .web section .Table .tbody .tr .tdId {
+            width: 2.8125rem;
+            position: relative;
+            font-size: 0.76172rem;
+            text-align: center; }
+            .web section .Table .tbody .tr .tdId .topThree {
+              position: absolute;
+              left: 1.17188rem;
+              top: 0.58594rem;
+              width: 0.52734rem;
+              height: 0.32227rem; }
+              .web section .Table .tbody .tr .tdId .topThree img {
+                width: 0.52734rem;
+                height: 0.32227rem; }
+          .web section .Table .tbody .tr .tdName {
+            width: 5.85938rem; }
+          .web section .Table .tbody .tr .tdImg {
+            width: 2.34375rem;
+            margin-top: 0.43945rem; }
+            .web section .Table .tbody .tr .tdImg img {
+              width: 1.78711rem;
+              height: 1.78711rem;
+              border-radius: 1.78711rem;
+              overflow: hidden; }
+        .web section .Table .tbody .tr::after {
+          content: "";
+          display: block;
+          clear: both; }
+        .web section .Table .tbody .tr:first-of-type,
+        .web section .Table .tbody .tr:nth-of-type(2),
+        .web section .Table .tbody .tr:nth-of-type(3) {
+          color: #e7c598; }
+        .web section .Table .tbody .active {
+          position: absolute;
+          bottom: -1px;
+          width: 14.64844rem;
+          color: #bf0c21;
+          z-index: 50;
+          background: #e7c598; }
+        .web section .Table .tbody .active2 {
+          color: #bf0c21;
+          width: 14.64844rem;
+          background: #e7c598; }
+  .web footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 7%;
+    overflow: hidden;
+    overflow-y: auto; }
+    .web footer .home {
+      font-size: 0.87891rem;
+      color: #bf0c21;
+      line-height: 1.20117rem;
+      width: 1.20117rem;
+      height: 1.20117rem;
+      border-radius: 100%;
+      background: #e7c598;
+      position: absolute;
+      bottom: 0.87891rem;
+      right: 1.17188rem;
+      text-align: center;
+      box-shadow: 1px 2px 5px #000; }
+
+@media only screen and (min-width: 320px) and (max-width: 374px) {
+  .listTitle {
+    font-size: 0.65rem;
+    width: 7.95rem;
+    line-height: 1.1rem;
+    height: 1.1rem;
+    margin: 1.025rem auto 0; }
+
+  .Table {
+    font-size: 0.575rem;
+    height: 23rem; }
+    .Table .tbody .tr {
+      height: 2.525rem; }
+      .Table .tbody .tr .td {
+        line-height: 2.525rem; }
+      .Table .tbody .tr .tdId {
+        width: 2.4rem;
+        font-size: 0.65rem; }
+        .Table .tbody .tr .tdId .topThree {
+          left: 0.975rem;
+          top: 0.45rem;
+          width: 0.45rem;
+          height: 0.275rem; }
+          .Table .tbody .tr .tdId .topThree img {
+            width: 0.45rem;
+            height: 0.275rem; }
+      .Table .tbody .tr .tdName {
+        width: 5rem; }
+      .Table .tbody .tr .tdImg {
+        width: 2rem;
+        margin-top: 0.5rem; }
+        .Table .tbody .tr .tdImg img {
+          width: 1.525rem;
+          height: 1.525rem; }
+
+  .active {
+    bottom: 3.22266rem; } }
+@media only screen and (min-width: 767px) and (max-width: 1000px) {
+  .listTitle {
+    font-size: 1.56rem;
+    width: 19.08rem;
+    line-height: 2.64rem;
+    height: 2.64rem;
+    margin: 2.46rem auto 0; }
+
+  .Table {
+    font-size: 1.3rem;
+    height: 41.01563rem;
+    width: 30rem; }
+    .Table .tbody {
+      height: 41.01563rem; }
+      .Table .tbody .tr {
+        height: 4.54102rem; }
+        .Table .tbody .tr .td {
+          line-height: 4.54102rem; }
+        .Table .tbody .tr .tdId {
+          width: 5.76rem;
+          font-size: 1.3rem; }
+          .Table .tbody .tr .tdId .topThree {
+            left: 2.46094rem;
+            top: 0.58594rem;
+            width: 0.9rem;
+            height: 0.55rem; }
+            .Table .tbody .tr .tdId .topThree img {
+              width: 0.9rem;
+              height: 0.55rem; }
+        .Table .tbody .tr .tdName {
+          width: 12rem; }
+        .Table .tbody .tr .tdImg {
+          width: 4.8rem;
+          margin-top: 0.58594rem; }
+          .Table .tbody .tr .tdImg img {
+            width: 2.92969rem;
+            height: 2.92969rem; }
+
+  .active {
+    bottom: 4.6875rem;
+    width: 30rem;
+    height: 4.54102rem; }
+
+  .active2 {
+    width: 30rem;
+    height: 4.54102rem; }
+
+  .home {
+    width: 2.46rem;
+    height: 2.46rem;
+    border-radius: 2.46rem;
+    right: 3.36rem;
+    bottom: 1.5rem;
+    line-height: 2.46rem;
+    font-size: 1.2rem; } }
+@media only screen and (min-width: 414px) and (max-width: 768px) {
+  .active {
+    bottom: 7.32422rem; } }
+
+/*# sourceMappingURL=rankingList.css.map */
